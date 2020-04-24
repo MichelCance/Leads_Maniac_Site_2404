@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Leads Maniac</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/grayscale.min.css" rel="stylesheet">
+
+  <style> #mainNav {
+            min-height: 56px;
+            background-color: #fff
+        }
+
+        #mainNav .navbar-toggler {
+            font-size: 80%;
+            padding: .75rem;
+            color: #64a19d;
+            border: 1px solid #64a19d
+        }
+
+        #mainNav .navbar-toggler:focus {
+            outline: 0
+        }
+
+        #mainNav .navbar-brand {
+            color: #161616;
+            font-weight: 700;
+            padding: .9rem 0
+        }
+
+        #mainNav .navbar-nav .nav-item:hover {
+            color: fade(white, 80%);
+            outline: 0;
+            background-color: transparent
+        }
+
+        #mainNav .navbar-nav .nav-item:active,
+        #mainNav .navbar-nav .nav-item:focus {
+            outline: 0;
+            background-color: transparent
+        }
+
+        @media (min-width:992px) {
+            #mainNav {
+                padding-top: 0;
+                padding-bottom: 0;
+                border-bottom: none;
+                background-color: transparent;
+                transition: background-color .3s ease-in-out
+            }
+
+            #mainNav .navbar-brand {
+                padding: .5rem 0;
+                color: black
+            }
+
+            #mainNav .nav-link {
+                transition: none;
+                padding: 2rem 1.5rem;
+                color: black
+            }
+
+            #mainNav .nav-link:hover {
+                color: rgba(255, 255, 255, .75)
+            }
+
+            #mainNav .nav-link:active {
+                color: #fff
+            }
+
+            #mainNav.navbar-shrink {
+                background-color: #fff
+            }
+
+            #mainNav.navbar-shrink .navbar-brand {
+                color: #161616
+            }
+
+            #mainNav.navbar-shrink .nav-link {
+                color: #161616;
+                padding: 1.5rem 1.5rem 1.25rem;
+                border-bottom: .25rem solid transparent
+            }
+
+            #mainNav.navbar-shrink .nav-link:hover {
+                color: #64a19d
+            }
+
+            #mainNav.navbar-shrink .nav-link:active {
+                color: #467370
+            }
+
+            #mainNav.navbar-shrink .nav-link.active {
+                color: #64a19d;
+                outline: 0;
+                border-bottom: .25rem solid #64a19d
+            }
+        }
+
+        .masthead {
+            position: relative;
+            width: 100%;
+            height: auto;
+            min-height: 35rem;
+            padding: 15rem 0;
+            background: url(../img/logo.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-size: cover
+        }
+
+        .masthead h1 {
+            font-family: 'Bebas Neue';
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+            letter-spacing: .8rem;
+            background: -webkit-linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, 0));
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text
+        }
+
+        .masthead h2 {
+            max-width: 20rem;
+            font-size: 1rem
+        }
+
+        @media (min-width:768px) {
+            .masthead h1 {
+                font-size: 4rem;
+                line-height: 4rem
+            }
+        }
+
+        @media (min-width:992px) {
+            .masthead {
+                height: 100vh;
+                padding: 0
+            }
+
+            .masthead h1 {
+                font-size: 6.5rem;
+                line-height: 6.5rem;
+                letter-spacing: .8rem
+            }
+
+            .masthead h2 {
+                max-width: 30rem;
+                font-size: 1.25rem
+            }
+        }
+
+        .btn {
+            box-shadow: 0 .1875rem .1875rem 0 rgba(0, 0, 0, .1) !important;
+            padding: 1.25rem 2rem;
+            font-family: 'Bebas Neue';
+            font-size: 80%;
+            text-transform: uppercase;
+            letter-spacing: .15rem;
+            border: 0
+        }
+
+        .btn-primary {
+            background-color: #64a19d
+        }
+
+        .btn-primary:hover {
+            background-color: #4f837f
+        }
+
+        .btn-primary:focus {
+            background-color: #4f837f;
+            color: #fff
+        }
+
+        .btn-primary:active {
+            background-color: #467370 !important
+        }
+
+        .about-section {
+            padding-top: 10rem;
+            background: #a5edf2
+        }
+
+        .about-section p {
+            margin-bottom: 5rem
+        }
+
+        .projects-section {
+            padding: 10rem 0
+        }
+
+        .projects-section .featured-text {
+            padding: 2rem
+        }
+
+        @media (min-width:992px) {
+            .projects-section .featured-text {
+                padding: 0 0 0 2rem;
+                border-left: .5rem solid #64a19d
+            }
+        }
+
+        .projects-section .project-text {
+            padding: 3rem;
+            font-size: 90%
+        }
+
+        @media (min-width:992px) {
+            .projects-section .project-text {
+                padding: 1rem
+            }
+
+            .projects-section .project-text hr {
+                border-color: #64a19d;
+                border-width: .25rem;
+                width: 30%
+            }
+        }
+
+        .signup-section {
+            padding: 10rem 0;
+            background: url(../img/bg-signup.jpg);, 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-size: cover
+        }
+
+        .signup-section .form-inline input {
+            box-shadow: 0 .1875rem .1875rem 0 rgba(0, 0, 0, .1) !important;
+            padding: 1.25rem 2rem;
+            height: auto;
+            font-family: 'Bebas Neue';
+            font-size: 80%;
+            text-transform: uppercase;
+            letter-spacing: .15rem;
+            border: 0
+        }
+
+        .contact-section {
+            padding: 5rem 0 0
+        }
+
+        .contact-section .card {
+            border: 0;
+            border-bottom: .25rem solid #64a19d
+        }
+
+        .contact-section .card h4 {
+            font-size: .8rem;
+            font-family: 'Bebas Neue';
+            text-transform: uppercase;
+            letter-spacing: .15rem
+        }
+
+        .contact-section .card hr {
+            border-color: #64a19d;
+            border-width: .25rem;
+            width: 3rem
+        }
+
+        .contact-section .social {
+            margin-top: 5rem
+        }
+
+        .contact-section .social a {
+            text-align: center;
+            height: 3rem;
+            width: 3rem;
+            background: rgba(255, 255, 255, .1);
+            border-radius: 100%;
+            line-height: 3rem;
+            color: rgba(255, 255, 255, .3)
+        }
+
+        .contact-section .social a:hover {
+            color: rgba(255, 255, 255, .5)
+        }
+
+        .contact-section .social a:active {
+            color: #fff
+        }
+
+        body {
+            font-family: Bebas Neue;
+            letter-spacing: .0625em
+        }
+
+        a {
+            color: #64a19d
+        }
+
+        a:focus,
+        a:hover {
+            text-decoration: none;
+            color: #3c6360
+        }
+
+        .bg-black {
+            background-color: #93f0f5 !important
+        }
+
+        .bg-primary {
+            background-color: #64a19d !important
+        }
+
+        .text-primary {
+            color: #64a19d !important
+        }
+
+        #textarea {
+          resize: none;
+          height: 100px;
+        }
+
+        #SendMSG{
+          margin-left: auto !important;
+        }
+
+        footer {
+            padding: 5rem 0
+        }</style>
+  
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Leads Maniac</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about" style="color: black">Challenge</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#projects" style="color: black">Prestations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <h1 class="mx-auto my-0 text-uppercase"></h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5"></h2>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="text-black mb-4">Le tournant Digital</h2>
+          <p class="text-black-50">Tout les acteurs économiques de quelque secteur que ce soit font ou vont faire face à la transformation numérique de leur activité et de leur organisation. Ce processus inévitable doit être anticipé plutôt que subit. Pour cela il est important de faire appel à des professionnels aguerris disposant d'une connaissance et d'une experience vous permettant de faire la jonction avec l'univers numérique.</p>
+        </div>
+      </div>
+      <img src="img/terminal.jpg" class="img-fluid" alt="Ecran de terminal">
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section bg-light">
+    <div class="container">
+
+      <!-- Featured Project Row -->
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-xl-8 col-lg-7">
+          <img class="img-fluid mb-3 mb-lg-0" src="img/consulting.jpg" alt="">
+        </div>
+        <div class="col-xl-4 col-lg-5">
+          <div class="featured-text text-center text-lg-left">
+            <h4>Prestations</h4>
+            <p class="text-black-50 mb-0">Leads Maniac propose une accompagnement complet pour vous aider à prendre le tournant digital</p>
+            <br />
+            <ul class="mb-0 text-black-50">
+              <li>Consulting: nos équipes vous aident à implementer et diffuser une culture numérique au sein de votre organisation.</li>
+              <li>Formation: nos equipes interviennent pour le compte de plusieurs organismes de formation sur des problématiques digitales</li>
+            </ul>
+            <br />
+            <p class="mb-0 text-black-50"> Basés sur Montpellier, notre champs d'intervention s'étenc sur les régions Occitanie, PACA, AURA ainsi quue l'Ile de France.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project One Row -->
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="img/digitaltransformation.jpg" alt="Scientifiques analysant une chambre frigorifique">
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h4 class="text-Black text-center">Transformation Numérique</h4>
+                <p class="mb-0 text-black-50">Pour vous accompagner au mieux dans votre transformation numérique, nos prestations incluent:</p>
+                <ul class="mb-0 text-black-50">
+                  <li>Définition et priorisation des besoins</li>
+                  <li>Rédaction de cahier des charges</li>
+                  <li>Aide au choix de prestataires</li>
+                  <li>Identification des besoins en formation des équipes</li>
+                </ul>
+                <br />
+                <p class="mb-0 text-black-50">Domaines: Installation ERP/CRM, RGPD, Outils Web, Community Management, etc.</p>
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Two Row -->
+      <div class="row justify-content-center no-gutters">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="img/dataprotection.jpg" alt="Clavier avec cone de signalisation">
+        </div>
+        <div class="col-lg-6 order-lg-first">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h4 class="text-black text-center">Protection des données</h4>
+                <p class="mb-0 text-black-50">Leads Maniac vous accompagne dans la mise en place de votre politique RGPD au travers de différentes prestations:</p>
+                <ul class="mb-0 text-black-50">
+                  <li>Cartographie des données</li>
+                  <li>Définition de votre politique de confidentialité interne et externe</li>
+                  <li>Mise en place des Registres: traitements, violations de données, etc.</li>
+                  <li>Etude d'impact sur les données collectées</li>
+                  <li>Formation/ Senisibilisation des équipes à la protection des données</li>
+                </ul>
+                <hr class="d-none d-lg-block mb-0 mr-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Signup Section -->
+  <section id="signup" class="signup-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+          <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+          <h2 class="text-white mb-5">Formulaire de contact</h2>
+
+          <form class="form-inline d-flex">
+            <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3" id="inputName" placeholder="Nom">
+            <input type="text" class="form-control flex-fill mb-3" id="inputCompany" placeholder="Société">
+            <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3" id="inputTel" placeholder="Téléphone">
+            <input type="email" class="form-control flex-fill mb-3" id="inputEmail" placeholder="Email">
+            <textarea type="text" class="form-control flex-fill mb-3 w-100" id="textarea" placeholder="Message"></textarea>
+            <div><button type="submit" class="btn btn-primary " id="SendMSG">Valider</button></div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section bg-black">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Adresse</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">199, rue Hélène Boucher, 34170 Castelnau Le Lez</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-envelope text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Email</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">
+                <a href="mailto:commercial@leadsmaniac.com">commercial@leadsmaniac.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-mobile-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Tel</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">+33 7 81 49 62 39</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="social d-flex justify-content-center">
+        <a href="#" class="mx-2">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="mx-2">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="mx-2">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black small text-center text-grey-50">
+    <div class="container">
+      Copyright &copy; Leads Maniac 2020
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/grayscale.min.js"></script>
+
+</body>
+
+</html>
